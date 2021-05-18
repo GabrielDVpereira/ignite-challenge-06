@@ -1,0 +1,6 @@
+{
+  "*.(ts|tsx)": [
+    "eslint 'pages/**' --fix",
+    "git add"
+  ]
+}
