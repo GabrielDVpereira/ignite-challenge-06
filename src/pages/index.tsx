@@ -1,12 +1,26 @@
-import { Box } from '@chakra-ui/react'
-import { WorldTripHeader, HomeBanner, TripDescriptions } from '../compoents/organisms'
+import { Box, Divider } from '@chakra-ui/react'
+import { Title } from '../compoents/atoms'
+import {
+  WorldTripHeader,
+  HomeBanner,
+  TripDescriptions,
+  ContinentsSwiper,
+} from '../compoents/organisms'
 
 export default function Home() {
   return (
     <Box as="main">
       <WorldTripHeader />
       <HomeBanner />
-      <TripDescriptions />
+      <Box mx="24">
+        <TripDescriptions />
+        <Divider borderWidth="1px" borderColor="dark.black" width="24" mx="auto" />
+        <Title fontWeight="normal" color="dark.headings" fontSize="36px" textAlign="center">
+          Vamos nessa? <br />
+          Então escolha seu continente
+        </Title>
+        <ContinentsSwiper />
+      </Box>
     </Box>
   )
 }

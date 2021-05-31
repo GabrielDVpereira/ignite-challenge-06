@@ -3,7 +3,7 @@ import { Flex } from '@chakra-ui/react'
 
 export function TripDescriptions() {
   return (
-    <Flex w="100%" justifyContent="space-around" mt="36">
+    <Flex w="100%" justifyContent="space-between" mt="36">
       <ImageWithDescription
         description="vida noturna"
         imageSrc="images/home/cocktail.svg"
