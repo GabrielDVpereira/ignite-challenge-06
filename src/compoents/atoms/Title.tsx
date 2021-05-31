@@ -9,7 +9,7 @@ interface TitleProps extends TextProps {
 export function Title({ children, fontWeight = 'semibold', ...rest }: TitleProps) {
   return (
     <Text
-      fontSize={['md', 'xl']}
+      fontSize={['xs', 'xl']}
       color="dark.black"
       isTruncated
       noOfLines={[1, 2, 3]}
