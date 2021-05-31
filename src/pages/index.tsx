@@ -1,11 +1,11 @@
-import { Box, Heading } from '@chakra-ui/react'
-import { WorldTripHeader } from '../compoents/organisms'
+import { Box } from '@chakra-ui/react'
+import { WorldTripHeader, HomeBanner } from '../compoents/organisms'
 
 export default function Home() {
   return (
     <Box as="main">
       <WorldTripHeader />
-      <Heading>Home</Heading>
+      <HomeBanner />
     </Box>
   )
 }

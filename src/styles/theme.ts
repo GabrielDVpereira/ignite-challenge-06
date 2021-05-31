@@ -26,6 +26,7 @@ export const theme = extendTheme({
       body: {
         bg: 'light.heading',
         color: 'dark.heading',
+        fontFamily: 'fonts.body',
       },
     },
   },

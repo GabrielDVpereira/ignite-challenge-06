@@ -13,7 +13,7 @@ interface HeaderProps {
 
 export function Header({ logoSrc, logoAlt, back = false, onClickBack, onClickLogo }: HeaderProps) {
   return (
-    <Flex w="100%" align="center" px="20" py="10">
+    <Flex w="100%" align="center" px="20" py="5">
       {back && <Icon as={IoIosArrowBack} onClick={onClickBack} cursor="pointer" />}
       <Center w="100%">
         <Logo src={logoSrc} alt={logoAlt} onClick={onClickLogo} cursor="pointer" />

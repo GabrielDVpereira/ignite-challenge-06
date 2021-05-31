@@ -10,7 +10,7 @@ interface BannerProps extends BoxProps {
 const heightBySize = {
   sm: '20vh',
   md: '30vh',
-  lg: '40vh',
+  lg: '50vh',
 }
 
 export function BgImage({ size, image, children, ...rest }: BannerProps) {
