@@ -12,7 +12,7 @@ export default function Home() {
     <Box as="main">
       <WorldTripHeader />
       <HomeBanner />
-      <Box mx="24">
+      <Box px="24">
         <TripDescriptions />
         <Divider borderWidth="1px" borderColor="dark.black" width="24" mx="auto" />
         <Title fontWeight="normal" color="dark.headings" fontSize="36px" textAlign="center">
