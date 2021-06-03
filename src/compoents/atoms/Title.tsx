@@ -12,7 +12,7 @@ export function Title({ children, fontWeight = 'semibold', ...rest }: TitleProps
       fontSize={['xs', 'xl']}
       color="dark.black"
       isTruncated
-      noOfLines={[1, 2, 3]}
+      noOfLines={[2, 3]}
       fontWeight={fontWeight}
       {...rest}
     >

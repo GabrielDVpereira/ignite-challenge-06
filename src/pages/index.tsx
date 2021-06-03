@@ -9,16 +9,16 @@ import {
 
 export default function Home() {
   return (
-    <Box as="main">
+    <Box as="main" overflowX="hidden">
       <WorldTripHeader />
       <HomeBanner />
-      <Box px="28" pb="18">
+      <Box px={['0', '28']} pb="18">
         <TripDescriptions />
         <Divider borderWidth="1px" borderColor="dark.black" width="24" mx="auto" my="16" />
         <Title
           fontWeight="normal"
           color="dark.headings"
-          fontSize="36px"
+          fontSize={['20px', '36px']}
           textAlign="center"
           lineHeight="1.2"
           mb="12"

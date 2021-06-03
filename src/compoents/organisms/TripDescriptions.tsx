@@ -1,9 +1,9 @@
 import { ImageWithTitle } from '../molecules'
-import { Flex } from '@chakra-ui/react'
+import { SimpleGrid } from '@chakra-ui/react'
 
 export function TripDescriptions() {
   return (
-    <Flex w="100%" justifyContent="space-between" mt="36">
+    <SimpleGrid mt={['8', '36']} columns={[2, 5]} w="100%" mx={['8', '0']}>
       <ImageWithTitle
         description="vida noturna"
         imageSrc="images/home/cocktail.svg"
@@ -25,6 +25,6 @@ export function TripDescriptions() {
         imageSrc="images/home/earth.svg"
         imageAlt="cocktail"
       />
-    </Flex>
+    </SimpleGrid>
   )
 }

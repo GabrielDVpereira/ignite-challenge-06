@@ -1,5 +1,5 @@
 import { Title } from '../atoms'
-import { Flex, Image } from '@chakra-ui/react'
+import { Flex, Image, useBreakpointValue, Box } from '@chakra-ui/react'
 
 interface ImageWithDescriptionProps {
   imageSrc: string
@@ -8,10 +8,24 @@ interface ImageWithDescriptionProps {
 }
 
 export function ImageWithTitle({ imageSrc, imageAlt, description }: ImageWithDescriptionProps) {
+  const isMobileVersion = useBreakpointValue({ base: true, md: true, lg: false })
+  console.log(isMobileVersion)
+
+  const getImageOrDot = () => {
+    if (isMobileVersion) {
+      return <Box height="8px" width="8px" borderRadius="50%" bg="hightlight.main" mr="4" />
+    }
+
+    return <Image src={imageSrc} alt={imageAlt} h="85px" w="85px" />
+  }
   return (
-    <Flex flexDirection="column" justifyContent="center" alignItems="center">
-      <Image src={imageSrc} alt={imageAlt} h="85px" w="85px" />
-      <Title fontSize="24px" color="dark.headings" mt="4">
+    <Flex
+      flexDirection={['row', 'column']}
+      justifyContent={['start', 'center']}
+      alignItems={'center'}
+    >
+      {getImageOrDot()}
+      <Title fontSize={['18px', '24px']} color="dark.headings" mt={['0', '4']}>
         {description}
       </Title>
     </Flex>

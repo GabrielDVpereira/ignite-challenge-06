@@ -16,7 +16,7 @@ export function ContinentsSwiper() {
     <BgImage
       key={continent.id}
       w="100%"
-      h="450px"
+      h={['250px', '450px']}
       image={`images/home/slider/${continent.id}.jpg`}
       backgroundSize="cover"
       backgroundRepeat="no-repeat"
@@ -26,10 +26,10 @@ export function ContinentsSwiper() {
       alignItems="center"
       flexDirection="column"
     >
-      <Title color="light.white" fontSize="48" textAlign="center">
+      <Title color="light.white" fontSize={['24px', '48px']} textAlign="center">
         {continent.name}
       </Title>
-      <Text color="light.white" fontSize="24" fontWeight="700">
+      <Text color="light.white" fontSize={['14px', '24px']} fontWeight="700">
         {continent.description}
       </Text>
     </BgImage>

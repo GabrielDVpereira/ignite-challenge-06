@@ -15,7 +15,13 @@ interface SwiperContainerProps {
 
 export function SwiperContainer({ sliders }: SwiperContainerProps) {
   return (
-    <Swiper pagination={true} navigation={true} autoplay={true} loop={true}>
+    <Swiper
+      pagination={true}
+      navigation={true}
+      autoplay={true}
+      loop={true}
+      style={{ width: '100%' }}
+    >
       {sliders.map((slide, index) => (
         <SwiperSlide key={index}>{slide}</SwiperSlide>
       ))}
