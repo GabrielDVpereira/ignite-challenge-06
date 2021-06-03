@@ -1085,6 +1085,11 @@
   dependencies:
     csstype "^2.6.9"
 
+"@types/swiper@^5.4.2":
+  version "5.4.2"
+  resolved "https://registry.yarnpkg.com/@types/swiper/-/swiper-5.4.2.tgz#ff206cf5aea787f580b5dd9b466b4bcb8e0442f3"
+  integrity sha512-/7MaVDZ8ltMCZb6yfg1HWBRjwFjy9ytKpuPSZfNTrxpkQCaGQZdpceDSqKaSfGmJcVF0NcBFRsGTStyytV7grw==
+
 "@types/tinycolor2@1.4.2":
   version "1.4.2"
   resolved "https://registry.yarnpkg.com/@types/tinycolor2/-/tinycolor2-1.4.2.tgz#721ca5c5d1a2988b4a886e35c2ffc5735b6afbdf"

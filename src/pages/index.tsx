@@ -12,10 +12,17 @@ export default function Home() {
     <Box as="main">
       <WorldTripHeader />
       <HomeBanner />
-      <Box px="24">
+      <Box px="28" pb="18">
         <TripDescriptions />
-        <Divider borderWidth="1px" borderColor="dark.black" width="24" mx="auto" />
-        <Title fontWeight="normal" color="dark.headings" fontSize="36px" textAlign="center">
+        <Divider borderWidth="1px" borderColor="dark.black" width="24" mx="auto" my="16" />
+        <Title
+          fontWeight="normal"
+          color="dark.headings"
+          fontSize="36px"
+          textAlign="center"
+          lineHeight="1.2"
+          mb="12"
+        >
           Vamos nessa? <br />
           Então escolha seu continente
         </Title>

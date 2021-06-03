@@ -2,9 +2,10 @@ import { Box, BoxProps } from '@chakra-ui/react'
 import { ReactNode } from 'react'
 
 interface BannerProps extends BoxProps {
-  size: 'sm' | 'md' | 'lg'
+  size?: 'sm' | 'md' | 'lg'
   children: ReactNode
   image: string
+  bgShadow?: boolean
 }
 
 const heightBySize = {
@@ -13,9 +14,15 @@ const heightBySize = {
   lg: '50vh',
 }
 
-export function BgImage({ size, image, children, ...rest }: BannerProps) {
+export function BgImage({ size, image, children, bgShadow = false, ...rest }: BannerProps) {
+  const getBgImage = (): string => {
+    let bgImage = ''
+    if (bgShadow) bgImage = bgImage + 'linear-gradient(rgba(0, 0, 0, 0.3),rgba(0, 0, 0, 0.3)),'
+    return bgImage + `url(${image})`
+  }
+  console.log(getBgImage())
   return (
-    <Box {...rest} width="100vw" height={heightBySize[size]} bgImage={`url(${image})`}>
+    <Box width="100vw" height={heightBySize[size]} bgImage={getBgImage()} {...rest}>
       {children}
     </Box>
   )
