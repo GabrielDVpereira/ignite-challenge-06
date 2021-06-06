@@ -1,5 +1,5 @@
 interface BannerByContinentProps {
-  continent: 'south_america' | 'north_america' | 'africa' | 'asia' | 'europe' | 'oceania'
+  continent: string
 }
 import { Banner } from '../molecules'
 
@@ -13,8 +13,24 @@ const continentNames = {
 }
 
 export function BannerByContinent({ continent }: BannerByContinentProps) {
-  const continentImg = `images/continents/${continent}`
+  const continentImg = `images/home/slider/oceania.jpg`
   const continentName = continentNames[continent]
 
-  return <Banner bannerImg={continentImg} bannerTitle={continentName} size="lg" />
+  return (
+    <Banner
+      backgroundRepeat="no-repeat"
+      bannerImg={continentImg}
+      bannerTitle={continentName}
+      size="lg"
+      objectFit="cover"
+      height={['150px', '500px']}
+      display="flex"
+      alignItems={['center', 'flex-end']}
+      justifyContent={['center', 'flex-start']}
+      pl={['0', '140px']}
+      pb={['0', '60px']}
+      fontSize={['28px', '48px']}
+      color="light.white"
+    />
+  )
 }

@@ -20,7 +20,7 @@ export function BgImage({ size, image, children, bgShadow = false, ...rest }: Ba
     if (bgShadow) bgImage = bgImage + 'linear-gradient(rgba(0, 0, 0, 0.3),rgba(0, 0, 0, 0.3)),'
     return bgImage + `url(${image})`
   }
-  console.log(getBgImage())
+
   return (
     <Box width="100vw" height={heightBySize[size]} bgImage={getBgImage()} {...rest}>
       {children}

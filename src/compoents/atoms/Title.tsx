@@ -10,7 +10,7 @@ export function Title({ children, fontWeight = 'semibold', ...rest }: TitleProps
   return (
     <Text
       fontSize={['xs', 'xl']}
-      color="dark.black"
+      color="dark.heading"
       isTruncated
       noOfLines={[2, 3]}
       fontWeight={fontWeight}

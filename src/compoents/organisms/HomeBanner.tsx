@@ -12,7 +12,7 @@ export function HomeBanner() {
             color="light.white"
             fontSize={['20px', '36px']}
             fontWeight="normal"
-            lineHeight="2rem"
+            lineHeight={['2rem', '2.5rem']}
           >
             5 Continentes, <br /> infinitas possibilidades.
           </Title>

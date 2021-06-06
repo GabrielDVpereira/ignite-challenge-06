@@ -1,18 +1,14 @@
-import { Box, Divider } from '@chakra-ui/react'
+import { Divider } from '@chakra-ui/react'
 import { Title } from '../compoents/atoms'
-import {
-  WorldTripHeader,
-  HomeBanner,
-  TripDescriptions,
-  ContinentsSwiper,
-} from '../compoents/organisms'
+import { Container } from '../compoents/molecules'
+import { HomeBanner, TripDescriptions, ContinentsSwiper } from '../compoents/organisms'
+import { BasePage } from '../compoents/templates'
 
 export default function Home() {
   return (
-    <Box as="main" overflowX="hidden">
-      <WorldTripHeader />
+    <BasePage>
       <HomeBanner />
-      <Box px={['0', '28']} pb="18">
+      <Container>
         <TripDescriptions />
         <Divider borderWidth="1px" borderColor="dark.black" width="24" mx="auto" my="16" />
         <Title
@@ -26,8 +22,8 @@ export default function Home() {
           Vamos nessa? <br />
           Então escolha seu continente
         </Title>
-        <ContinentsSwiper />
-      </Box>
-    </Box>
+      </Container>
+      <ContinentsSwiper />
+    </BasePage>
   )
 }
