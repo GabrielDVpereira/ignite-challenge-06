@@ -12,7 +12,7 @@ export function WorldTripHeader() {
       logoAlt="World Trip"
       onClickLogo={() => router.push('/')}
       back={shouldHaveGoback}
-      onClickBack={shouldHaveGoback && router.back}
+      onClickBack={shouldHaveGoback && (() => router.push('/'))}
     />
   )
 }
