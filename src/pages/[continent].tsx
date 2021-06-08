@@ -1,9 +1,9 @@
-import { Flex, Text, Box, HStack } from '@chakra-ui/react'
+import { Flex, Text, HStack } from '@chakra-ui/react'
 import { GetStaticProps, GetStaticPaths } from 'next'
 import { Title } from '../compoents/atoms'
 import { BannerByContinent } from '../compoents/organisms'
 import { Container } from '../compoents/molecules'
-import { BasePage } from '../compoents/templates'
+import { BasePage, ContinentsBestCitiesList } from '../compoents/templates'
 
 interface ContinentPageProps {
   continentName: string
@@ -35,20 +35,8 @@ export default function ContinentPage({ continentName }: ContinentPageProps) {
         <Title fontSize={['24px', '36px']} fontWeight="normal">
           Cidades +100
         </Title>
-        <Flex mt={['20px', '40px']} flexWrap={['unset', 'wrap']} overflowX={['scroll', 'hidden']}>
-          {[1, 2, 3, 4, 5].map((_, index) => (
-            <Box
-              key={index}
-              w="256px"
-              h="279px"
-              background="red"
-              borderRadius="5px"
-              mr={['20px', '45px']}
-              mb="48px"
-              flexShrink={0}
-            />
-          ))}
-        </Flex>
+
+        <ContinentsBestCitiesList continent={continentName} />
       </Container>
     </BasePage>
   )

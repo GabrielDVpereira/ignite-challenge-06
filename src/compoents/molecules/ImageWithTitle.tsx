@@ -9,7 +9,6 @@ interface ImageWithDescriptionProps {
 
 export function ImageWithTitle({ imageSrc, imageAlt, description }: ImageWithDescriptionProps) {
   const isMobileVersion = useBreakpointValue({ base: true, md: true, lg: false })
-  console.log(isMobileVersion)
 
   const getImageOrDot = () => {
     if (isMobileVersion) {
