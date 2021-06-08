@@ -3,7 +3,7 @@ import { TextWithDescription } from '../molecules'
 
 export function ContinentInfo() {
   return (
-    <HStack spacing="10" mt={['16px', '0']}>
+    <HStack spacing="10" mt={['16px', '0']} ml={['0', '70px']}>
       <TextWithDescription text="50" description="países" />
       <TextWithDescription text="60" description="línguas" />
       <TextWithDescription
